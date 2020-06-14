@@ -1,0 +1,74 @@
+{
+    "i2c":[
+    	{
+        	"type":"PCA9685",
+         	"name":"I2C_1",
+         	"bus":1,
+         	"address":"0x40",
+         	"frequency":"800",
+         	"frequencyCorrectorFactor":"10.0578"
+    	}
+    ],
+    "sensors":[
+		{
+			"name":"rpmReader",
+			"type":"extRPMReader",
+			"address":"http://127.0.0.1:5000/"
+		}
+    ],
+	"drivers":[
+	    {
+		  "name":"feeder",
+		  "type":"MOTOR",
+		  "pins":{
+			     "control":"I2C_1.PWM_00"
+			     },
+		  "controlMapFile":"feeder.csv",
+		  "startup": {"value":0.0,"relative":false}
+	    },
+		{
+		  "name":"vertStepper",
+		  "type":"STEPPER",
+		  "pins":{
+			     "A+":"GPIO_05",
+			     "A-":"GPIO_06",
+				 "B+":"GPIO_02",
+			     "B-":"GPIO_19",
+			     "limit":"GPIO_16"
+		  },
+		  "controlMapFile":"verticalStepperMap.csv",
+		  "startup": {"value":0.0,"relative":false}
+		},
+		{
+		  "name":"horizStepper",
+		  "type":"STEPPER",
+		  "pins":{
+			     "A+":"GPIO_09",
+			     "A-":"GPIO_11",
+				 "B+":"GPIO_14",
+			     "B-":"GPIO_15"
+		  },
+		  "startup": {"value":0.0,"relative":false}
+		},
+		{
+		  "name":"topSpeed",
+		  "type":"MOTOR",
+		  "pins":{
+			     "control":"GPIO_13"
+		  },
+		  "controlMapFile":"topSpeedMap.csv",
+		  "sensor":"rpmReader",
+		  "startup": {"value":0.0,"relative":false}
+		},
+		{
+		  "name":"botSpeed",
+		  "type":"MOTOR",
+		  "pins":{
+			     "control":"GPIO_18"
+		  },
+		  "controlMapFile":"botSpeedMap.csv",
+		  "sensor":"rpmReader",
+		  "startup": {"value":0.0,"relative":false}
+		}		
+	]
+}

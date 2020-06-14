@@ -1,0 +1,147 @@
+<h1>Direct Control</h1>
+<div class="alert alert-error" style="display:none;">
+</div>
+<form class="form-horizontal">
+  <div class="control-group">
+    <div class="controls">
+      <table style="width:100%">
+      <tr>
+      <td  width="5%"><b>Feed</b></td> 
+	  <td  width="95%"><button type="submit" size="20" id="feedStartStop" style="height:50px;width: 220px;background-color:lightgreen">Start</button></td>      
+      </tr>
+      <td>Target</td> 
+      <td>
+      <input type="text" id="feedSpeedRequested" placeholder="BPM" size="6" maxlength="6" value="" style="width: 130px">
+      <button type="submit" class="btn btn-space" size="20" id="sendFeedSpeed">Submit</button>
+      </td>
+      </tr>
+      </table>
+    </div>
+  </div>
+  <div class="control-group">
+    <div class="controls">
+      <table style="width:100%">
+      <tr>
+      <b>Top Speed</b> (rpm) 
+      <br>
+      <td  width="5%">Actual</td> 
+	  <td  width="95%"><input type="text" id="topSpeedActual" placeholder="" size="2" maxlength="2" value="" readonly style="width: 130px"></td>      
+      </tr>
+      <td>Target</td> 
+      <td>
+      <input type="text" id="topSpeedRequested" placeholder="RPM" size="6" maxlength="6" value="" style="width: 130px">
+      <button type="submit" class="btn btn-space" size="20" id="sendtopSpeed">Submit</button>
+      </td>
+      </tr>
+      </table>
+    </div>
+  </div>
+
+  <div class="control-group">
+    <div class="controls">
+      <table style="width:100%">
+      <tr>
+      <b>Bottom Speed</b> (rpm)
+      <br>
+      <td  width="5%">Actual</td> 
+	  <td  width="95%"><input type="text" id="botSpeedActual" placeholder="" size="2" maxlength="2" value="" readonly style="width: 130px"></td>      
+      </tr>
+      <td>Target</td> 
+      <td>
+      <input type="text" id="botSpeedRequested" placeholder="RPM" size="6" maxlength="6" value="" style="width: 130px">
+      <button type="submit" class="btn btn-space" size="20" id="sendbotSpeed">Submit</button>
+      </td>
+      </tr>
+      </table>
+    </div>
+  </div>
+
+
+  <div class="control-group">
+    <div class="controls">
+      <table style="width:100%">
+      <tr>
+      <b>Vertical Angle</b> (deg)
+      <br>
+      <td  width="5%">Actual</td> 
+	  <td  width="95%"><input type="text" id="updownAngle" placeholder="" size="2" maxlength="2" value="" readonly style="width: 130px"></td>      
+      </tr>
+      <td>Target</td> 
+      <td>
+      <input type="text" id="updownAngleRequested" placeholder="deg" size="6" maxlength="6" value="" style="width: 130px">
+      <button type="submit" class="btn btn-space" size="20" id="sendUpDown">Submit</button>
+      </td>
+      </tr>
+      <tr>
+      <td></td>
+      <td>
+      <button type="submit" class="btn btn-space" size="20" id="upButton">Up</button>
+      <button type="submit" class="btn btn-space" id="downButton">Down</button>      
+      <select class="form-control input-sm" style="width: 100px;" id="selUpDown">
+    	<option value="1">1  deg</option>
+    	<option value="2">3  deg</option>
+        <option value="3">5  deg</option>
+        <option value="4">10 deg</option>
+      </select>      
+      </td>
+      </tr>
+      </table>
+    </div>
+  </div>
+
+
+  <div class="control-group">
+    <div class="controls">
+      <table style="width:100%">
+      <tr>
+      <b>Horizontal Angle</b> (deg)
+      <br>
+      <td  width="5%">Actual</td> 
+	  <td  width="95%"><input type="text" id="leftrightAngle" placeholder="" size="2" maxlength="2" value="" readonly style="width: 130px"></td>      
+      </tr>
+      <td>Target</td> 
+      <td>
+      <input type="text" id="leftrightAngleRequested" placeholder="deg" size="6" maxlength="6" value="" style="width: 130px">
+      <button type="submit" class="btn btn-space" size="20" id="sendLeftRight">Submit</button>
+      </td>
+      </tr>
+      <tr>
+      <td></td>
+      <td>
+      <button type="submit" class="btn btn-space" size="20" id="leftButton">Left</button>
+      <button type="submit" class="btn btn-space" id="rightButton">Right</button>      
+      <select class="form-control input-sm" style="width: 100px;" id="selLeftRight">
+    	<option value="1">1  deg</option>
+        <option value="2">5  deg</option>
+        <option value="3">10 deg</option>
+        <option value="4">15 deg</option>
+      </select>      
+      </td>
+      </tr>
+      </table>
+    </div>
+  </div>
+  <!--
+  <div class="control-group">
+    <div class="controls">
+      <input type="text" id="updownAngle" placeholder="Angle" size="6" maxlength="6" value="5">
+      <br>
+      <button type="submit" class="btn btn-space" size="20" id="upButton">Up</button>
+      <button type="submit" class="btn btn-space" id="downButton">Down</button>      
+    </div>
+  </div>
+  <div class="control-group">
+    <div class="controls">
+	<select class="form-control input-sm">
+    	<option value="1">1  deg</option>
+        <option value="2">5  deg</option>
+        <option value="3">10 deg</option>
+        <option value="4">15 deg</option>
+    </select>
+      <br>
+      <button type="submit" class="btn btn-space" id="leftButton">Left</button>
+      <button type="submit" class="btn btn-space" id="rightButton">Right</button>
+    </div>
+  </div>
+-->
+</form>
